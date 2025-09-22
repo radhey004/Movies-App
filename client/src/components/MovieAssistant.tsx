@@ -48,7 +48,7 @@ export default function ChatbotWidget() {
     setMessages((prev) => [...prev, newMessage]);
 
     try {
-      const res = await fetch("http://localhost:5000/api/chat", {
+      const res = await fetch("https://movies-app-2-wqy6.onrender.com/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input }),
