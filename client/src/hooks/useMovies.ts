@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Movie } from '../types/Movie';
 
 // Replace with actual API calls to your backend
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://movies-app-1-vzr5.onrender.com/api';
 
 export const useMovies = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
