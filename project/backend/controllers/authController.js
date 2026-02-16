@@ -30,7 +30,7 @@ const register = async (req, res) => {
       res.status(400).json({ message: 'Invalid user data' });
     }
   } catch (error) {
-    console.error(error);
+    console.error('Register error:', error);
     res.status(500).json({ message: 'Server error' });
   }
 };
@@ -53,7 +53,7 @@ const login = async (req, res) => {
       res.status(401).json({ message: 'Invalid email or password' });
     }
   } catch (error) {
-    console.error(error);
+    console.error('Login error:', error);
     res.status(500).json({ message: 'Server error' });
   }
 };
