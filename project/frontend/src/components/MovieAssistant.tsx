@@ -49,7 +49,7 @@ export default function ChatbotWidget() {
 
     try {
       //const res = await fetch ("http://localhost:5000/api/chat",{
-      const res = await fetch("https://movies-app-1-vzr5.onrender.com/api/chat", {
+      const res = await fetch("https://movies-app-final.onrender.com/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input }),

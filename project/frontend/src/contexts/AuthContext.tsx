@@ -24,7 +24,7 @@ interface AuthProviderProps {
 }
 
 // Replace with actual API calls to your backend
-const API_URL = import.meta.env.VITE_API_URL || 'https://movies-app-1-vzr5.onrender.com/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://movies-app-final.onrender.com/api';
 //const API_URL = import.meta.env.VITE_API_URL || 'https://localhost:5000/api';
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
