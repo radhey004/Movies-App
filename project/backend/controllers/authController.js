@@ -30,6 +30,7 @@ const register = async (req, res) => {
       res.status(400).json({ message: 'Invalid user data' });
     }
   } catch (error) {
+    console.error(error);
     res.status(500).json({ message: 'Server error' });
   }
 };
@@ -52,6 +53,7 @@ const login = async (req, res) => {
       res.status(401).json({ message: 'Invalid email or password' });
     }
   } catch (error) {
+    console.error(error);
     res.status(500).json({ message: 'Server error' });
   }
 };
@@ -62,6 +64,7 @@ const getMe = async (req, res) => {
     const user = await User.findById(req.user._id).select('-password');
     res.json(user);
   } catch (error) {
+    console.error(error);
     res.status(500).json({ message: 'Server error' });
   }
 };
@@ -79,6 +82,7 @@ const addToFavorites = async (req, res) => {
     
     res.json({ message: 'Added to favorites', favorites: user.favorites });
   } catch (error) {
+    console.error(error);
     res.status(500).json({ message: 'Server error' });
   }
 };
@@ -94,6 +98,7 @@ const removeFromFavorites = async (req, res) => {
     
     res.json({ message: 'Removed from favorites', favorites: user.favorites });
   } catch (error) {
+    console.error(error);
     res.status(500).json({ message: 'Server error' });
   }
 };
